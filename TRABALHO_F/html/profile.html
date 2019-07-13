@@ -1,0 +1,206 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <style>
+        .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="/Trabalho_F/css/profile.css">
+</head>
+<body class="d-none" id="body">
+    <div class="container" id="container">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light rounded border-bottom">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            
+        <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Meme Review <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="feed.html" id="feed">Feed</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profile.html" id="myProfile">My profile</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="myAccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Account</a>
+              <div class="dropdown-menu" aria-labelledby="myAccount">
+                <a class="dropdown-item" href="settings.html">Settings</a>
+                <a class="dropdown-item" id="logOut">Logout</a>
+              </div>
+            </li>
+            <form class="form-inline my-2 my-md-0">
+              <div class="dropdown nav-item">
+                <input 
+                  class="dropdown-toggle form-control live-search-box" 
+                  id="quicksearch" 
+                  data-toggle="dropdown" 
+                  aria-haspopup="true" 
+                  aria-expanded="false" 
+                  placeholder="Search User" 
+                  style="width: 250px;">
+                <div class="dropdown-menu live-search-list" aria-labelledby="dropdownMenuButton"  id="aux-search">
+                </div>
+              </div>
+            </form>
+            <!-- <li class="nav-item">
+              <button class="btn my-2 btn-outline-secondary my-sm-0" type="submit" href="login.html" id="btn-loggin">Login</button>
+            </li>
+            <li class="nav-item">
+              <button class="btn my-2 btn btn-outline-primary my-sm-0" type="submit" id="btn-reggist" href="registo.html">Creat an Account</button>
+            </li> -->
+          </ul>
+        </div>
+      </nav>
+
+      <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <img src="https://picsum.photos/250" class="rounded-circle z-depth-1-half avatar-pic" alt="Profile Picture" id="img-profile" width="250" height="250">
+        <h1 id="username-profile" class="display-4">Teste Utilizador </h1>
+        <h5 id="name-profile">
+          Nome Apelido
+        </h5>
+        <p class="lead" id="descricao-profile">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dapibus arcu rutrum, sagittis quam in, finibus justo. Sed semper ligula nec luctus mollis. Etiam laoreet elit turpis,
+        </p>
+        <div class="row justify-content-center">
+            <h6 class="col-md-1">Posts: <p class="lead" id="posts-profile">12</p></h6>
+            <h6 class="col-md-1">Followers: <p class="lead" id="fle-profile">12</p></h6>
+            <h6 class="col-md-1">Following: <p class="lead" id="flo-profile">12</p></h6>
+        </div>
+
+        <p>
+          <a href="#" class="btn btn-primary my-2" id="uploadp-profile" data-toggle="modal" data-target="#modalP-profile">Upload New Photo</a>
+          <a href="#" class="btn btn-secondary my-2" id="uploadu-profile" data-toggle="modal" data-target="#modalU-profile">Change Profile Photo</a>
+        </p>
+        
+        <!-- upload de foto normal -->
+        <div id="modalP-profile" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="display: none;">
+          <div class="modal-dialog ">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="myLargeModalLabel">Upload New Photo</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form class="needs-validation" novalidate="" id="formP-profile" method="POST" enctype="multipart/form-data">
+                  <div class="mb-3">
+                    <div class="py-5 text-center">
+                      <img src="https://mdbootstrap.com/img/Photos/Others/placeholder-avatar.jpg" class="bd-placeholder-img card-img-top" id="imgP-profile"
+                        alt="example placeholder avatar" id="avatarImage" width="417" height="500" preserveAspectRatio="xMidYMid slice" focusable="false"> 
+                    </div>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="Addinput-imgP-profile">image</span>
+                      </div>
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input form-control" id="input-imgP-profile" name="image">
+                        <label class="custom-file-label text-truncate" for="input-imgP-profile" id="urlP-Image">Choose file</label>
+                        <div class="invalid-feedback">
+                          Image not valid.
+                        </div>
+                      </div>
+                      <br>
+                    </div>
+                  </div>
+                  <div class="mb-3 text-left">
+                    <label class="h6" for="description">Description:</label>
+                    <textarea class="form-control" rows="2" id="description-perfil" placeholder="Write something about your self" name="descriptions"></textarea>
+                    <div class="invalid-feedback">
+                        Description too long.
+                   </div>
+                  </div>
+                  <hr class="mb-4">
+                  <button class="btn btn-primary btn-lg " type="submit">Upload a new photo</button>
+                  <div id="alert-registo" class="alert alert-danger d-none" role="alert">
+                    A simple danger alert—check it out!
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- upload de foto Perfil -->
+        <div id="modalU-profile" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="display: none;">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="myLargeModalLabel">Change Profile Photo</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form class="needs-validation" novalidate="" id="formU-profile" method="POST" enctype="multipart/form-data">
+                  <div class="mb-3">
+                    <div class="py-5 text-center">
+                      <img src="https://mdbootstrap.com/img/Photos/Others/placeholder-avatar.jpg" class="rounded-circle z-depth-1-half avatar-pic"
+                    alt="example placeholder avatar" width="250" height="250" id="imgU-profile">
+                    </div>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupFileAddon">image</span>
+                      </div>
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input form-control" id="input-imgU-profile" name="image">
+                        <label class="custom-file-label text-truncate" for="input-imgU-profile" id="urlU-Image">Choose file</label>
+                        <div class="invalid-feedback">
+                          Image not valid.
+                        </div>
+                      </div>
+                      <br>
+                    </div>
+                  </div>
+                  <hr class="mb-4">
+                  <button class="btn btn-primary btn-lg " type="submit">Change Profile Photo</button>
+                  <div id="alert-registo" class="alert alert-danger d-none" role="alert">
+                    A simple danger alert—check it out!
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lista de Imagens que vão ser feitas em DOM -->
+
+        <div class="album py-5 bg-light">
+          <div class="container">
+            <div class="row justify-content-center" id="images-profile">
+              
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <script src="/Trabalho_F/js/profile.js"></script>
+    <script src="/Trabalho_F/js/nav_helper.js"></script>
+</body>
+
+</html>

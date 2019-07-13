@@ -1,0 +1,173 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Settings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <style>
+        .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="/Trabalho_F/css/profile.css">
+    <link rel="stylesheet" href="/Trabalho_F/css/registo.css">
+</head>
+<body class="bg-light">
+    <div class="container">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light rounded border-bottom">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+                
+            <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Centered nav only <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="feed.html" id="feed">Feed</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="profile.html" id="myProfile">My profile</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" id="myAccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Account</a>
+                  <div class="dropdown-menu" aria-labelledby="myAccount">
+                    <a class="dropdown-item" href="#">Settings</a>
+                    <a class="dropdown-item" id="logOut">Logout</a>
+                  </div>
+                </li>
+                <form class="form-inline my-2 my-md-0">
+                  <div class="dropdown nav-item">
+                    <input 
+                      class="dropdown-toggle form-control live-search-box" 
+                      id="quicksearch" 
+                      data-toggle="dropdown" 
+                      aria-haspopup="true" 
+                      aria-expanded="false" 
+                      placeholder="Search User" 
+                      style="width: 250px;">
+                    <div class="dropdown-menu live-search-list" aria-labelledby="dropdownMenuButton"  id="aux-search">
+                    </div>
+                  </div>
+                </form>
+                <!-- <li class="nav-item">
+                  <button class="btn my-2 btn-outline-secondary my-sm-0" type="submit" href="login.html" id="btn-loggin">Login</button>
+                </li>
+                <li class="nav-item">
+                  <button class="btn my-2 btn btn-outline-primary my-sm-0" type="submit" id="btn-reggist" href="registo.html">Creat an Account</button>
+                </li> -->
+              </ul>
+            </div>
+          </nav>
+
+          <div class="container2 i-am-centered">
+            <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+                <div class="py-5 text-center">
+                    <h2>Account Settings</h2>
+                </div>
+            
+                <form class="needs-validation" novalidate="" id="form-settings" method="POST" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="firstName">First name</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="" value="" required="" name="firstName">
+                            <div class="invalid-feedback">
+                                Valid first name is required.
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="lastName">Last name</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="" value="" required="" name="lastName">
+                            <div class="invalid-feedback">
+                                Valid last name is required.
+                            </div>
+                        </div>
+                    </div>
+                        
+                    <div class="mb-3">
+                        <label for="username">Username</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">@</span>
+                            </div>
+                            <p id="username" class="form-control lead text-left">TextUser</p>
+                            
+                            <div class="invalid-feedback" style="width: 100%;" id="username-feedback">
+                                    Your username is not valid.
+                            </div>
+                        </div>
+                    </div>
+                        
+                    <div class="mb-3">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="you@example.com" name="email">
+                        <div class="invalid-feedback">
+                            Please enter a valid email address.
+                        </div>
+                    </div>
+            
+                    <div class="mb-3">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="****" name="password"> 
+                        <div class="invalid-feedback">
+                            Please enter two passwords that match.
+                        </div>
+                    </div>
+            
+                    <div class="mb-3">
+                        <label for="password2">Confirm Password</label>
+                        <input type="password" class="form-control" id="password2" placeholder="****"> 
+                        <div class="invalid-feedback">
+                            Please enter two passwords that match.
+                        </div>
+                     </div>
+                        
+                    <div class="mb-3">
+                        <label for="description">Description:</label>
+                        <textarea class="form-control" rows="3" id="description" placeholder="Write something about your self" name="description"></textarea>
+                        <div class="invalid-feedback">
+                            Description too long.
+                        </div>
+                    </div>
+            
+                    <div class="row">
+                        <div class="col-md-5 mb-3">
+                            <label for="country">Country</label>
+                            <select class="form-control custom-select d-block w-100" id="country" required="" name="pais">
+                                <option value="portgal">Portugal</option>
+                                <option value="United States">United States</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid country.
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <hr class="mb-4">
+                <button class="btn btn-primary btn-lg btn-block " type="submit">Create an Account</button>
+                <div id="alert-registo" class="alert alert-danger d-none" role="alert">
+                    A simple danger alert—check it out!
+                </div>
+          </div>
+          </div>
+        <script src="/Trabalho_F/js/settings.js"></script>
+        <script src="/Trabalho_F/js/nav_helper.js"></script>
+    </div>
+</body>
+</html>

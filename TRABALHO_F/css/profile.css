@@ -1,0 +1,14 @@
+body {
+  padding-bottom: 20px;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.i-am-centered { 
+  margin: auto; 
+  max-width: 300px;
+}
+
+.lh-condensed { line-height: 1.25; }

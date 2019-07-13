@@ -1,0 +1,135 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <style>
+        .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="/Trabalho_F/css/profile.css">
+</head>
+<body class="d-none" id="body"> 
+    <div class="container">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light rounded border-bottom">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            
+        <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Meme Review<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="feed.html" id="feed">Feed</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profile.html" id="myProfile">My profile</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="myAccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Account</a>
+              <div class="dropdown-menu" aria-labelledby="myAccount">
+                <a class="dropdown-item" href="#">Settings</a>
+                <a class="dropdown-item" id="logOut">Logout</a>
+              </div>
+            </li>
+            <form class="form-inline my-2 my-md-0">
+              <div class="dropdown nav-item">
+                <input 
+                  class="dropdown-toggle form-control live-search-box" 
+                  id="quicksearch" 
+                  data-toggle="dropdown" 
+                  aria-haspopup="true" 
+                  aria-expanded="false" 
+                  placeholder="Search User" 
+                  style="width: 250px;">
+                <div class="dropdown-menu live-search-list" aria-labelledby="dropdownMenuButton"  id="aux-search">
+                </div>
+              </div>
+              <li class="nav-item">
+                <a class="btn my-2 btn-outline-secondary my-sm-0"  id="btn-loggin" href="login.html">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="btn my-2 btn btn-outline-primary my-sm-0"  id="btn-reggist" href="registo.html">Creat an Account</a>
+              </li>
+            </form>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <img src="https://picsum.photos/250" class="rounded-circle z-depth-1-half avatar-pic" alt="Profile Picture" id="img-profile" width="250" height="250">
+        <h1 id="username-profile" class="display-4">Teste Utilizador </h1>
+        <h5 id="name-profile">
+          Nome Apelido
+        </h5>
+        <p class="lead" id="descricao-profile">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dapibus arcu rutrum, sagittis
+        </p>
+        <div class="row justify-content-center">
+            <h6 class="col-md-1">Posts: <p class="lead" id="posts-profile">12</p></h6>
+            <h6 class="col-md-1">Followers: <p class="lead" id="fle-profile">12</p></h6>
+            <h6 class="col-md-1">Following: <p class="lead" id="flo-profile">12</p></h6>
+        </div>
+
+        <p>
+          <btn class="btn btn-primary my-2" id="follow-profile">Follow</btn>
+        </p>
+
+        <!-- Lista de Imagens que vão ser feitas em DOM -->
+
+        <div class="album py-5 bg-light">
+          <div class="container">
+            <div class="row justify-content-center" id="images-profile">
+              
+               <!-- <div class="col-md-5 center-block">
+                <div class="card mb-5 shadow-sm">
+                  <img class="bd-placeholder-img card-img-top" src="https://picsum.photos/200/300" width="100%" height="500" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <div class="card-body">
+                    <p class="card-text">Start Now By Uploading a New Photo</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-success">
+                          <object data="/Trabalho_F/icons/arrow-up.svg" type="image/svg+xml" width="24" height="24"></object>
+                        </button>
+                        <button type="button" class="btn btn-sm btn-outline-danger">
+                          <object data="/Trabalho_F/icons/arrow-down.svg" type="image/svg+xml" width="24" height="24"></object>
+                        </button>
+                      </div>
+                      <p class="lead">13</p>
+                      <small class="text-muted">9 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>  -->
+  
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <script src="/Trabalho_F/js/profileSearch.js"></script>
+    <script src="/Trabalho_F/js/nav_helper.js"></script>
+</body>
+
+</html>
